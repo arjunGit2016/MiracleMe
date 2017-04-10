@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="padding home-background">
+    <form ng-submit="employeeLogin()">
+      <center><img src="img/logo-white.png" style="margin-top:10%;margin-bottom:10%"></center>
+      <center>
+        <h2 style="margin-top:-10px;color:#ffffff">Miracle Me</h2>
+        <hr style="width:30%">
+      </center>
+      <div class="row">
+        <div class="col">
+          <label class="item item-input log {{loginData.loginColor}}" >
+            <i class=" icon ion-android-contact padding"></i>
+            <input class="fontLarge" type="text" id="username" placeholder="Username" ng-model="loginData.username"  ng-keyup="changeLoginColor()">
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="item item-input log {{loginData.passwordColor}}">
+            <i class=" icon ion-android-lock padding"></i>
+            <input class="fontLarge" type="password" id="password" placeholder="Password" ng-model="loginData.password" ng-keyup="changePasswordColor()">
+          </label>
+        </div>
+      </div>
+      <center>
+        <button class="button button-block button-calm bgmiracleBlue" style="border-radius: 10px;width: 97%;height: 50px !important;">
+          <span style="font-size:larger"><b>Sign In</b></span>
+        </button>
+      </center>
+      <center>
+        <a class="button button-clear" href="#/EmployeeForgotPassword"><span style="font-size:larger;color:#ffffff;">Forgot Password?</span></a>
+      </center>
+    </form>
+  </ion-content>
+</ion-view>

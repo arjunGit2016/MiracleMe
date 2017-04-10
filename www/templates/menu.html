@@ -1,0 +1,69 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-calm bgmiracleBlue">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="side_menu_bkg">
+    <ion-header-bar class="bar bar-header bar-clam bgmiracleBlue">
+      <h1 class="title" style="color:white;">Miracle Me</h1>
+    </ion-header-bar>
+    <ion-content class="has-header side_menu_bkg">
+      <ul class="list">
+        <li style="text-align:center" class="menuHeader">
+          <div class="item item-avatar item" style="padding-left:40px;background-image:url({{coverSrc}}) !important;background-size:cover;">
+            <img style="max-width:80px !important;max-height:80px !important;margin-left:85px" ng-src="{{loginUserDetails.Image}}">
+            <h3 style="color:#ffffff ;margin-top:90px"> {{loginUserDetails.FName}} {{loginUserDetails.MName}} {{loginUserDetails.LName}}</h3>
+            <h4 style="color:#ffffff ;">{{loginUserDetails.TitleTypeId}} </h4>
+            <a href="#/imagegrid"> <i class="icon ion-edit"></i></a>
+          </div>
+        </li>
+        <li>
+          <ion-item class="item transp" menu-close href="#/menu/EmployeeSearch">
+            <i class="icon ion-ios-search-strong" style="margin-right:5px;"></i>&nbsp;Employee Search
+          </ion-item>
+        </li>
+        <li>
+          <ion-item class="item transp" menu-close href="#/menu/Issues">
+            <i class="icon ion-alert-circled" style="margin-right:5px;"></i>&nbsp;Facility Maintenance
+          </ion-item>
+        </li>
+        <li>
+          <ion-item class="item transp" menu-close href="#/menu/EmployeeNewsFeed" ng-click="doRefresh()" ng-controller='getNewsFeedController'>
+            <i class="icon ion-ios-paper-outline" style="margin-right:5px;"></i><span class="notificationCount badge badge-assertive icon-badge" ng-show="showCount">{{unReadCount}}</span>&nbsp;Notifications
+          </ion-item>
+        </li>
+        <li>
+          <ion-item class="item transp" menu-close href="#/menu/AppFeedback">
+            <i class="icon ion-android-textsms" style="margin-right:5px;"></i>&nbsp;Give Feedback
+          </ion-item>
+        </li>
+
+        <li>
+            <ion-item class="item transp" ng-show="showFeedBack" menu-close href="#/menu/ViewAppFeedback" ng-controller="ViewAppFeedbackCtrl" ng-click="viewFeedbackMessages()">
+              <i class="icon ion-document-text" style="margin-right:5px;"></i>&nbsp;View Feedback
+            </ion-item>
+          </li>
+
+          <li>
+          <ion-item class="item transp" menu-close href="#/menu/AppReleaseNotes">
+            <i class="icon ion-compose" style="margin-right:5px;"></i>&nbsp;Release Notes
+          </ion-item>
+        </li>
+        <li>
+          <ion-item class="item transp" menu-close ng-controller="EmpLogoutCtrl" ng-click="employeeLogout()">
+            <i class="icon ion-log-out" style="margin-right:5px;"></i>&nbsp;Log Out
+          </ion-item>
+        </li>
+
+      </ul>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

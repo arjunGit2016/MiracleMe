@@ -1,0 +1,450 @@
+.popup-buttons .button{
+background-color:#00aae7 !important;
+
+}
+.popup-title {
+color:white !important;
+}
+.cameraIcon{
+color:white !important;
+
+}
+.popup-head {
+background-color:#00aae7 !important;
+}
+
+.addImage {
+  position: relative;
+  display: inline-block;
+}
+
+.addImage .ion-close-circled {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  color: #ffffff !important;
+  font-size:1.2em !important;
+}
+.button-icon .icon:before, .button-icon.icon:before {
+
+   font-size: 27px !important;
+}
+i.icon.ion-record
+{
+visibility:true !important;
+}
+.sliderImage{
+  max-width:100% !important;
+
+  height:auto;
+
+  display:block;
+}
+.headfoot{
+  color:white !important;
+}
+.bgmiracleBlue{
+  background-color: #00aae7 !important;
+}
+.miracleBlue{
+  color: #00aae7;
+}
+.iconcolor{
+  color:#2368a0 !important;
+}
+/*......................*/
+
+.postButton{
+background-color: #00aae7 !important;
+ }
+
+
+
+ion-md-input {
+    position: relative;
+    margin-top: 45px;
+    margin-left: 0px;
+    display: block;
+}
+
+ion-md-input input {
+    font-size: 18px !important;
+    padding: 10px 10px 10px 5px !important;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #757575  !important;
+    vertical-align: baseline;
+}
+
+ion-md-input input:focus {
+    outline: none;
+}
+
+ion-md-input .md-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+ion-md-input .md-bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #00aae7 ;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+ion-md-input .md-bar:before {
+    left: 50%;
+}
+
+ion-md-input input:focus~.md-bar:before {
+    left: 0%;
+    width: 100%;
+}
+
+ion-md-input label{
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 5px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ion-md-input input:focus~label, ion-md-input input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #00aae7 ;
+}
+
+ion-md-input .md-highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+
+ion-md-input input:focus~.md-highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE ;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE ;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE ;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.ion-input-select,
+select {
+  -webkit-appearance:none;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);
+  border:thin solid #dddddd ;
+  font-weight:300;
+  display:inline;
+  vertical-align:middle;
+  color:#333;
+  padding: auto 0;
+  overflow:hidden;
+  box-sizing:border-box;
+
+}
+
+.ion-input-select {
+  width:100%;
+  font-size:1rem;
+  background-image: url(http://i.imgur.com/nA9xx1X.png);
+  background-position:right;
+  text-indent:20px;
+  padding:.5rem 0;
+
+}
+
+option {
+  background:;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+:focus {
+  outline:none;
+}
+
+/* Empty. Add your own CSS if you like */
+#grid
+table, th , td  {
+ border: 2px solid black;
+
+}
+
+
+.bar-footer{
+  background: #00aae7 ;
+
+}
+
+
+/*.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}*/
+.buttoncolor{
+background-color: #232527 !important;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+/*post Issue
+*/
+ion-md-input {
+  position: relative;
+  margin-top: 45px;
+  margin-left: 20px;
+  display: block; }
+ion-md-input input {
+  font-size: 18px !important;
+  padding: 10px 10px 10px 5px !important;
+  display: block;
+  width: 90%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #757575  !important;
+  vertical-align: baseline; }
+ion-md-input input:focus {
+  outline: none; }
+ion-md-input .md-bar {
+  position: relative;
+  display: block;
+  width: 90%; }
+ion-md-input .md-bar:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #00aae7 ;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all; }
+ion-md-input .md-bar:before {
+  left: 50%; }
+ion-md-input input:focus ~ .md-bar:before {
+  left: 0%;
+  width: 100%; }
+ion-md-input label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+ion-md-input input:focus ~ label, ion-md-input input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #00aae7 ; }
+ion-md-input .md-highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5; }
+ion-md-input input:focus ~ .md-highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease; }
+@-webkit-keyframes inputHighlighter {
+  from { background: #5264AE ; }to { width: 0; background: transparent; } }
+@-moz-keyframes inputHighlighter {
+  from { background: #5264AE ; }
+  to { width: 0; background: transparent; } }
+@keyframes inputHighlighter {
+  from { background: #5264AE ; }
+  to { width: 0; background: transparent; } }
+
+
+.textareaComment{
+  width: 100%;
+  padding: 3px;
+  resize: none;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+.slider-pager .slider-pager-page{
+  color:white !important;
+}
+
+.item-text-center
+
+{
+
+   display: -webkit-box;
+
+   display: -webkit-flex;
+
+   display: -moz-box;
+
+   display: -moz-flex;
+
+   display: -ms-flexbox;
+
+   display: flex;
+
+   -webkit-box-align: center;
+
+   -ms-flex-align: center;
+
+   -webkit-align-items: center;
+
+   -moz-align-items: center;
+
+   align-items: center;
+
+   position: absolute;
+
+   top: 0;
+
+   height: 100%;
+
+}
+.ion-close{
+color: #232527 !important;
+}
+.ion-ion-ios-redo
+{
+color: #232527 !important;
+}
+.avatarDiv {
+   border-color: #ddd;
+   background-color: #232729;
+   color: #444;
+   position: relative;
+   z-index: 2;
+   display: block;
+   margin: -1px;
+   padding: 16px;
+   border-width: 0px;
+   border-style: solid;
+   font-size: 16px;
+}
+.menuHeader{
+  text-align:center;
+}
+
+.menuHeader .ion-edit{
+
+  position: absolute;
+
+  top:5px;
+
+  right:15px;
+
+  color: #ffffff;
+font-size: 1.2em;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #ef4048;
+
+}
+
+.overlayImage {
+    position: relative;
+}
+.overlayImage .overlay{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+ .ion-checkmark{
+ 	color:#232527 !important;
+
+ }
+ .buttoncolor{
+ background-color:#232427 !important;
+ }
+.addImage {
+  position: relative;
+  display: inline-block;
+ }

@@ -1,0 +1,21 @@
+
+.EmpProfile{
+  width: 100%;
+  height: auto;
+}
+
+.skillItem{
+  background-color: #b7b2b3;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.2em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+}
+
+.postButton{
+background-color: #00aae7 !important;
+ }

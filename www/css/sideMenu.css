@@ -1,0 +1,84 @@
+.bar-stable.bar.bar-header {
+ background: #00aae7 none repeat scroll 0 0;
+}
+
+.bar .title.title-left {
+    text-align: center;
+}
+.bar.bar-stable .title {
+   color: white;
+   font-style: cursive;
+   rgin-left: 15%;
+}
+
+.item .badge  {
+  position: absolute !important;
+  top: 14px  !important;
+  right: 120px !important;
+  font-size: 8px;
+  background-color: #ef4048  !important;
+}
+
+
+.menuHeader{
+  text-align:center;
+}
+
+.menuHeader .ion-edit{
+
+  position: absolute;
+
+  top:5px;
+
+  right:15px;
+
+  color: #ffffff;
+font-size: 1.2em;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #ef4048;
+
+}
+
+.item.transp {
+    background-color: transparent;
+    color: #fff;
+}
+.transp .item-content {
+    background-color: transparent !important;
+    color: #fff;
+}
+.side_menu_bkg{
+  color: #232729;
+  background-color: #232729;
+}
+.bgmiracleBlue{
+  background-color: #00aae7 !important;
+}
+
+
+
+.buttoncolor{
+background-color: #232527 !important;
+}
+
+
+.gridImagePadding{
+ padding: 3px;
+}
+.gridImage{
+ width: 100%;
+ height: 100%;
+}
+.overlayImage {
+    position: relative;
+}
+.overlayImage .overlay{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+ .ion-checkmark{
+ 	color:#232527 !important;
+
+ }

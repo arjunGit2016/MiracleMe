@@ -1,0 +1,20 @@
+<ion-view view-title="Employee Search">
+  <label class="bar bar-subheader item item-input padding">
+    <i class="icon ion-search placeholder-icon searchIcon"></i>
+    <input type="text" class="searchInput" placeholder="Search by name or email" ng-model="employeeName.searchKey" ng-keyup="employeeSuggestionList()">
+  </label>
+  <ion-content  lazy-scroll class="has-subheader has-header has-footer">
+    <div class="item item-icon-right  item-avatar" style="padding-top: 18px;padding-left: 80px;" ng-repeat="employeename in employeeSuggestionListArray track by $index" ng-model="employeename" ng-click="employeeDetails(employeename)">
+                <img image-lazy-src="{{employeename.Image}}" image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="-200">
+                <h2 class="miracleBlue">
+                  <span class=""></span></h2>
+                <h3><span class="" style="font-size:1em;color:#00aae7 ">{{employeename.EmployeeName}}</span></h3>
+                <h4><span class="">{{employeename.Designation}}</span></h4>
+                <h4><span class="">{{employeename.Location}}</span></h4>
+                <i class="icon ion-chevron-right right " style="color:black;font-size:medium;margin-top:-9px"></i>
+        </div>
+  </ion-content>
+  <div class="bar bar-footer  postButton">
+    <div class="title" style="color:white;">© Miracle Software Systems, Inc.</div>
+  </div>
+</ion-view>

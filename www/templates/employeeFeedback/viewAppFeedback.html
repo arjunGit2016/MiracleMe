@@ -1,0 +1,19 @@
+<ion-view view-title="Feedback Messages">
+  <label class="bar bar-subheader item item-input padding">
+    <i class="icon ion-search placeholder-icon searchIcon"></i>
+    <input type="text" class="searchInput" placeholder="Search by employee" ng-model="feedback.SearchKey" ng-keyup="feedbackSuggestionList()">
+  </label>
+  <ion-content class="has-subheader has-header has-footer">
+   <div class="item item-avatar item-icon-right" style="padding-top: 18px;padding-left: 80px;" ng-repeat="feedback in viewFeedbacks  |orderBy:'createdDate':true" ng-model="feedback" ng-click="showIndividualFeedback(feedback)">
+      <img ng-src="data:image/JPEG;base64,{{empImage}}">
+      <h4><span class="" style="color:#00aae7;"> &nbsp;{{feedback.Name}}</span></h4>
+      <h4><span class=""> &nbsp;{{feedback.CreatedDate}}</span></h4>
+      <i class="icon ion-chevron-right right" style="font-size:15px;"></i>
+    </div>
+
+
+  </ion-content>
+  <div class="bar bar-footer  postButton">
+    <div class="title" style="color:white;">© Miracle Software Systems, Inc.</div>
+  </div>
+</ion-view>

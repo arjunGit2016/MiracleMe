@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/loginPage.css" rel="stylesheet">
+  <link href="css/sideMenu.css" rel="stylesheet">
+  <link href="css/newsFeed.css" rel="stylesheet">
+  <link href="css/empSearch.css" rel="stylesheet">
+  <link href="css/empDetails.css" rel="stylesheet">
+  <link href="css/feedback.css" rel="stylesheet">
+  <link href="css/maintenance.css" rel="stylesheet">
+
+  <link href="lib/ionic-toast/src/ionic-toast.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+  <!-- ionic/angularjs js -->
+
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+  <script src="lib/ionic-modal-select/dist/ionic-modal-select.js"></script>
+  <script src="lib/ionic-image-lazy-load/ionic-image-lazy-load.js"></script>
+  <script src="lib/angular-img-fallback/angular.dcb-img-fallback.min.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  <script src="lib/angular-toArrayFilter/toArrayFilter.js"></script>
+  <script src="lib/ng-timeago/ngtimeago.js"></script>
+
+
+  <!-- your app's js -->
+
+  <script src="js/localDB/pouchdb-6.1.2.min.js"></script>
+  <script src="js/localDB/pouchdb-erase.min.js"></script>
+
+  <script src="lib/pouchdb-find/dist/pouchdb.find.min.js"></script>
+  <script src="lib/pouchdb-upsert/dist/pouchdb.upsert.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <script src="js/services/services.js"></script>
+  <script src="js/services/loaderService.js"></script>
+  <script src="js/services/tokenCallbackService.js"></script>
+  <script src="js/services/sentNotificationService.js"></script>
+  <script src="js/services/getNotificationService.js"></script>
+  <script src="js/services/getNetWorkService.js"></script>
+  <script src="js/services/maintenanceService.js"></script>
+
+  <script src="js/employeeGeneralControllers/employeeLoginController.js"></script>
+  <script src="js/employeeGeneralControllers/employeeLogoutController.js"></script>
+  <script src="js/employeeGeneralControllers/employeeCoverImagesController.js"></script>
+  <script src="js/employeeGeneralControllers/employeeForgotPasswordController.js"></script>
+  <script src="js/employeeNewsfeedControllers/getNewsFeedController.js"></script>
+  <script src="js/employeeNewsfeedControllers/viewRecievedNotifiction.js" /></script>
+  <script src="js/employeeNewsfeedControllers/createNotificationController.js"></script>
+  <script src="js/employeeSearchControllers/employeeSearchController.js"></script>
+  <script src="js/employeeSearchControllers/employeeDetailsController.js"></script>
+  <script src="js/appFeedbackControllers/appFeedbackController.js"></script>
+  <script src="js/appFeedbackControllers/viewAppFeedbackController.js"></script>
+  <script src="js/maintanenceControllers/issuesControllers/issuesCtrl.js"></script>
+  <script src="js/MaintanenceControllers/issuesControllers/closeCtrl.js"></script>
+  <script src="js/maintanenceControllers/addIssueCtrl.js"></script>
+  <script src="js/maintanenceControllers/editIssueCtrl.js"></script>
+  <script src="js/maintanenceControllers/userControllers/viewIssueCtrl.js"></script>
+  <script src="js/maintanenceControllers/userControllers/viewIssueCloseCtrl.js"></script>
+  <script src="js/maintanenceControllers/adminControllers/adminEditCtrl.js"></script>
+  <script src="js/maintanenceControllers/adminControllers/admin_EditCloseCtrl.js"></script>
+
+
+</head>
+
+<body ng-app="starter">
+  <ion-nav-bar class="bar-calm bgmiracleBlue">
+  </ion-nav-bar>
+  <ion-nav-view></ion-nav-view>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<ion-view view-title="News Feed">
+  <ion-nav-buttons side="right">
+    <a id="ToggleCss" ng-show="showCreatePush" class="button button-icon ion-ios-plus-outline" href="#/CreateNotification" ng-controller="createNotificationCtrl">
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="has-header has-footer">
+    <ion-refresher pulling-text="Getting Latest News..." on-refresh="doRefresh()">
+    </ion-refresher>
+
+
+
+    <div class="item item-avatar item-icon-right" ng-attr-id="{{notificationRx.readStatus && 'read' || 'Unread' }}" ng-repeat="notificationRx in notificationRxdata | toArray | orderBy : '-showNotification'" ng-click="fullnotification({{notificationRx}})">
+      <img style="max-width: 58px !important;max-height: 57px !important; left: 7px;" ng-src="{{notificationRx.senderImage}}">
+      <h2 class="miracleBlue">
+                 <span class=""></span></h2>
+      <h3><span class="" style="color:#00aae7;font-size:1em;margin-left: 5%;">{{notificationRx.showTitle}}</span></h3>
+      <h4><span class="" style="color:green;margin-left: 5%;">{{notificationRx.senderName}}</span></h4>
+      <h4><span class="" style="margin-left: 5%;">{{notificationRx.date | timeago}}</span></h4>
+
+
+      <i class="icon ion-chevron-right right" style="font-size:15px;"></i>
+    </div>
+
+  </ion-content>
+
+  <div ng-show="showCreatePush" class="tabs-icon-top tabs-striped tabs-background-calm tabs-color-light postButton">
+    <div class="tabs">
+      <a class="tab-item active" href="#/menu/EmployeeNewsFeed">
+        <h4 style="color:white;">Recieved</h4>
+      </a>
+      <a class="tab-item" href="#/menu/sentNotifications" ng-click="callSentDocs()" ng-controller="createNotificationCtrl">
+        <h4 style="color:white;">Sent</h4>
+      </a>
+    </div>
+  </div>
+
+
+  <div ng-show="!showCreatePush" class="bar bar-footer" style="background-color:#00aae7; color:white;">
+    <div class="title">© Miracle Software Systems, Inc.</div>
+  </div>
+
+
+  </ion-view>

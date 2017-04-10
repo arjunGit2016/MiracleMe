@@ -1,0 +1,28 @@
+<ion-view view-title="Feedback Details">
+
+  <ion-content class="has-header has-footer">
+
+    <div class="card" style="margin-top:5px">
+
+
+      <!-- Details -->
+      <div class="item item-divider row" style="background-color:#232527">
+        <h2 class="padding fontLarge col-90" style="color:#ffffff" ;><b>{{individualFeedback.Name}}</b></h2>
+      </div>
+      <div class="row" >
+        <div class="col"><span>{{individualFeedback.Email1}}</span></div>
+      </div>
+
+      <div class="row" style="color:black">
+        <div class="col"> <span style="color:green">{{individualFeedback.CreatedDate | date: 'yyyy-MM-dd'}}</span></div>
+      </div>
+      <div class="row" style="color:black; text-align:justify;">
+        <div class="col"><span>{{individualFeedback.Message}}</span></div>
+      </div>
+    </div>
+  </ion-content>
+
+  <div class="bar bar-footer  postButton">
+    <div class="title" style="color:white;">© Miracle Software Systems, Inc.</div>
+  </div>
+</ion-view>

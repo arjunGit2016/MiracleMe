@@ -1,0 +1,18 @@
+<ion-view  view-title="Image Grid View" >
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-arrow-left-c right" ng-click="back()"></button>
+  </ion-nav-buttons>
+<ion-content class="has-header has-footer">
+  <div class="row" style="flex-wrap:wrap" >
+     <div class="col-50 gridImagePadding overlayImage" ng-repeat="cover in CoverImages" ng-click="getImage($index)">
+          <img ng-src="{{cover.filename}}" class="gridImage" >
+		       <div class="overlay" style="display:{{cover.type}}">
+                 <i class="icon ion-checkmark" style="color: #ffffff !important"></i>
+		       </div>
+	   </div>
+   </div>
+ </ion-content>
+ <div class="bar bar-footer  postButton">
+   <div class="title" style="color:white;">© Miracle Software Systems, Inc.</div>
+ </div>
+</ion-view>

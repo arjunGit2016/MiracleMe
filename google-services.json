@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "928879809210",
+    "firebase_url": "https://miracle-me.firebaseio.com",
+    "project_id": "miracle-me",
+    "storage_bucket": "miracle-me.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928879809210:android:ee56261873a4d57b",
+        "android_client_info": {
+          "package_name": "com.miracleme.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928879809210-c45puq5gqdl4r3o4r6ss4g3k0og11u3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdTIT0i4qwYKX-i9sQnCyQlEzG2rBUMl0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

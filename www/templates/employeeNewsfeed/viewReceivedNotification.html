@@ -1,0 +1,57 @@
+
+
+<ion-view view-title="Notification Details">
+  <!-- <ion-nav-bar class="bar-calm bar bar-header bgmiracleBlue" align-title="center">
+    <ion-nav-buttons side="left">
+      <button class="button-clear" ng-click="goBack()">
+        <i class="icon ion-android-arrow-back"></i>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar> -->
+  <ion-content class="has-header has-footer">
+    <div class="">
+      <ion-slide-box does-continue="true" on-slide-changed="slideHasChanged($index)" show-pager="true" ng-if="notificationImage" >
+       <ion-slide  ng-repeat="img in notificationImage">
+             <img class="" ng-src="{{img}}" style="width:100% !important; height: auto !important;">
+
+       </ion-slide>
+         </ion-slide-box>
+
+      <!-- <img  class="notimage" src="img/not2.jpg"/> -->
+      <div class="row" id="nottitle" style="background-color:#232527">
+        <div class="col">
+          <h4 style="color:#ffffff;margin-left: 6px;text-align:justify">{{title}}</h4>
+        </div>
+
+      </div>
+
+	  <div class="row" id="nottitle" style="padding-top: 10px !important;">
+        <div class="col">
+          <span style="font-size:1.2em;text-align:justify;color:#232527 !important">{{message}}</span>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5 style="color:#232527;margin-left: 6px;"></h5></div>
+      </div>
+      <div class="list">
+          <a class="item item-avatar" style="padding-top: 18px;padding-left: 80px;">
+
+            <img ng-src="{{senderImage}}">
+
+            <h2 style="color:green">{{senderName}}</h2>
+
+
+            <h4>{{date | date:'medium'}}</h4>
+
+          </a>
+
+      </div>
+        </div>
+
+  </ion-content>
+
+  <div class="bar bar-footer" style="background-color:#00aae7; color:white;">
+    <div class="title">© Miracle Software Systems, Inc.</div>
+</ion-view>

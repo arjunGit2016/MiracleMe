@@ -1,0 +1,69 @@
+<ion-view  cache-view="false" view-title="Closed Issues" >
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-plus-outline" ng-click="postproblem()"></button>
+  </ion-nav-buttons>
+
+  <!--<ion-nav-buttons side="left">
+      <button class="button-clear" ng-click="goBack()">
+        <i class="icon ion-android-arrow-back"></i>
+      </button>
+  </ion-nav-buttons>-->
+
+
+
+  <label class="bar bar-subheader item item-input">
+             <i class="icon ion-search placeholder-icon"></i>
+             <input type="text" id="firstName" placeholder="Search" ng-keyup="firstsearch(name)" ng-model="name.firstName">
+           </label>
+
+         <button class="button button-clear" ng-click="search()">Search</button>
+
+  <ion-content class="has-subheader has-header has-footer">
+    <!-- <div class="padding" ng-if="responseData2.length==0" >
+
+    
+
+    </div> -->
+
+    <!-- <div class="list"  id="dfirstList" style="display:none;">
+    <div class="item  item-icon-right item-avatar" ng-if="responseData2.length>0" style="padding-top: 18px;padding-left: 80px;" ng-repeat="problems2 in responseData2|orderBy:'createdDate':true" ng-click="getIssue(problems2.fields.id)">
+
+
+          <img ng-src="{{problems2.fields.Image[0]}}" loading-src fallback-src="img/Issues4.png">
+
+          <h2 style="font-size:1em;color:#00aae7 ">{{problems2.fields.name}}</h2>
+
+            <h4 style="color:green">{{problems2.fields.status}}</h4>
+          <h4>{{problems2.fields.createdDate| timeago}}</h4>
+          <i class="icon ion-chevron-right right " style="color:black;font-size:medium;margin-top:-9px"></i>
+
+    </div>  </div> -->
+
+    <div id="dfirstList1"  style="display:block;">
+      <div class="item item-icon-right item-avatar"  style="padding-top: 18px;padding-left: 80px;" ng-show= {{problems.isResolved}}   ng-repeat="problems in responseData" ng-click="getIssue(problems)">
+
+
+        <img ng-src="{{problems.issueImage[0]}}" loading-src fallback-src="img/Issues4.png">
+
+
+            <h2 style="font-size:1em;color:#00aae7" class="fontLarge">{{problems.title}}</h2>
+
+              <h4 style="color:green">{{problems.status}}</h4>
+            <h4>{{problems.createdDate| timeago}}</h4>
+              <i class="icon ion-chevron-right right " style="color:black;font-size:medium;margin-top:-9px"></i>
+
+      </div>
+        </div>
+  </ion-content>
+
+<div class="tabs-icon-top tabs-striped tabs-background-calm tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item " href="#/menu/Issues">
+  <h4 style="color:white;">Open Issues</h4>
+      </a>
+      <a class="tab-item active" href="#/menu/tab2">
+  <h4 style="color:white;">Closed Issues</h4>
+      </a>
+    </div>
+
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view view-title="Employee Details">
+ <ion-content class="has-header has-footer">
+<div class="EmpProfile padding" style="background-image: url({{employeeDetails.CoverPic}});background-size:cover;background-position:center center">
+     <center>
+       <div style="">
+         <img id="profileImage1" style="width:150px;height:150px;border-radius:50%;margin-top:18px;" ng-src="{{employeeDetails.Image}}">
+         <h4 style="color:#ffffff  "><b>{{employeeDetails.EmployeeName}}</b></h4>
+         <h5 style="color:#ffffff  ">{{employeeDetails.Designation}}</h5>
+       </div>
+     </center>
+     <center>
+       <div class="row padding">
+         <div class="col iconMargin"></div>
+         <div class="col iconMargin">
+           <a href="tel:{{employeeDetails.WorkPhoneNo}}"><img src="img/call.png" class="" style="width:50px;"></a>
+         </div>
+         <div class="col iconMargin">
+           <a href="tel:{{countryCode}}{{employeeDetails.CellPhoneNo}}"><img src="img/cell.png" class="" style="width:50px;"></a>
+         </div>
+         <div class="col iconMargin">
+           <a href="#/menu/EmployeeDetails" ng-click="sendmail()"><img src="img/mail.png" class="" style="width:50px;"></a>
+         </div>
+         <div class="col iconMargin"></div>
+       </div>
+     </center>
+   </div>
+   <div>
+     <h4 class="padding" style="background-color:#232729  ;color:#ffffff  ;margin-top:0px">
+      <i class="icon ion-ios-information-outline" style="font-size:large"></i>
+      <span>About <b>{{employeeDetails.FirstName}}</b></span></h4>
+   </div>
+   <div class="padding" ng-if="employeeDetails.AboutMe != '-'">
+      <p> <h4>{{employeeDetails.AboutMe}}</h4></p>
+    </div>
+
+
+  <div class="row padding" style="flex-wrap: wrap" id="skills">
+     <div ng-if="skills.length >=1" class="col-30 skillItem" ng-repeat="skill in skills">
+       {{skill}}</div>
+   </div>
+   <div ng-if="aliasLength > 1">
+     <h4 class="padding">
+      <span>Call me as <b> {{employeeDetails.AliasName}}</b></span></h4>
+   </div>
+   <div>
+     <h4 class="padding">
+    <span>Working Since <b> {{employeeDetails.HireDate | date:'dd MMMM, yyyy'}}</b></span></h4>
+   </div>
+
+</ion-content>
+ <div class="bar bar-footer  postButton">
+   <div class="title" style="color:white;">© Miracle Software Systems, Inc.</div>
+ </div>
+</ion-view>

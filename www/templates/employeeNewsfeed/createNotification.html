@@ -1,0 +1,93 @@
+<ion-view view-title="Create Notification">
+  <ion-nav-bar class="bar-calm bar bar-header bgmiracleBlue" align-title="center">
+    <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-arrow-left-c right " ng-click="back()"></button>
+  </ion-nav-buttons>
+
+  </ion-nav-bar>
+  <ion-content class="has-header has-footer">
+
+    <center><img src="img/OpenCamera1.png" class="mainCameraIcon" style="width:100px;height:100px;margin-top:20px;" ng-click="uploadPopup($event)"></center>
+
+
+
+    <div class="row row-wrap">
+
+        <div class="col col-33 addImage"  ng-repeat="images in notificationImgURI">
+
+          <img class="" ng-src="{{images}}" style="width:100% !important; height: 100% !important;">
+
+          <i class="icon ion-close-circled" ng-click="remove($index)"></i>
+
+        </div>
+
+        <div class="col col-33 addCameraIcon hide">
+
+          <img src="img/OpenCamera1.png" class="" style="width:100px;height:100px;margin-top:20px;" ng-click="uploadSubPopup()">
+
+        </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <ion-radio ng-model="notification.choice" ng-value="'ToPerson'" ng-click="notificationType()">
+          To Person
+        </ion-radio>
+      </div>
+      <div class="col">
+        <ion-radio ng-model="notification.choice" ng-value="'ToLocation'" ng-click="notificationType()">
+          To Location
+        </ion-radio>
+      </div>
+    </div>
+          <div class="padding" ng-show="notification.showLocation">
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.3)">
+              <input type="text" ng-value="notification.employeesLocation" placeholder="Select employees location" class="col-90 textareaComment"/>
+
+               <button class="col-10 button button-calm button-icon icon ion-location footer-btn bgmiracleBlue" ng-disabled="inactive" modal-select ng-model="notification.employeesLocation" ng-click="getEmployeesLocation()" options="locations" modal-title="Select a Department" has-search="true">
+
+                 <div class="option">
+                    {{option}}
+                  </div>
+                </button>
+            </div>
+          </div>
+
+    <div ng-show="notification.showPerson"class="list list-inset">
+      <label class="item item-input">
+        <input type="text" id="notificationPersonsId" placeholder="Username" ng-model="notification.notificationPersonsId" ng-keyup="employeeList()" >
+
+      </label>
+
+  <div class="item item-icon-right  item-avatar" style="padding-top: 18px;padding-left: 80px;" ng-repeat="employeename in employeeSuggestionListArray track by $index" ng-model="notification.notificationPersonsId" ng-click="getEmployee(employeename)" >
+    <img image-lazy-src="{{employeename.Image}}" image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="-200">
+    <h2 class="miracleBlue">
+      <span class=""></span></h2>
+    <h3><span class="" style="font-size:1em;color:#00aae7 ">{{employeename.EmployeeName}}</span></h3>
+    <h4><span class="">{{employeename.Designation}}</span></h4>
+    <h4><span class="">{{employeename.Location}}</span></h4>
+    <i class="icon ion-chevron-right right " style="color:black;font-size:medium;margin-top:-9px"></i>
+</div>
+    </div>
+
+    <div class="list list-inset">
+      <label class="item item-input ">
+        <input type="text" id="notificationTitle" placeholder="Title" ng-model="notification.notificationTitle">
+      </label>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <textarea rows="7" name="message" id="notificationMessage" placeholder="Message" ng-model="notification.notificationMessage"></textarea>
+      </label>
+    </div>
+
+
+    <div class="padding">
+      <button  class="button button-block button-positive buttoncolor" style="border-radius:10px !important;" ng-click="createPushNotification()"><b> Send Notification </b></button>
+    </div>
+  </ion-content>
+  <div class="bar bar-footer" style="background-color:#00aae7; color:white;">
+    <div class="title">© Miracle Software Systems, Inc.</div> </div>
+
+</ion-view>

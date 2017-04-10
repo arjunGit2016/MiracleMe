@@ -1,0 +1,90 @@
+<ion-view cache-view="false" view-title="View Issue Details">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-arrow-left-c right " ng-click="back()"></button>
+  </ion-nav-buttons>
+
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Issues</h1>
+  </ion-header-bar>
+  <ion-content delegate-handle="content">
+
+    <div class="row row-wrap">
+
+        <div class="col addImage"  ng-repeat="pic in img">
+
+          <img class="" ng-src="{{pic}}" style="width:100% !important; height: auto !important;">
+
+        </div>
+</div>
+    <div class="card" style="margin-top:-5px">
+
+
+      <!-- Details -->
+      <div class="item item-divider row" style="background-color:#00aae7">
+        <h2 class="padding fontLarge col-90" style="color:#ffffff" ;><b>{{user}}</b></h2>
+
+      </div>
+
+      <div class="item item-text-wrap ">
+
+        <div class="row desc" style="margin-top:-20px;">
+          <div class="col"><span>{{des}}</span></div>
+        </div>
+        <div class="row desc" style="color:black">
+          <div class="col"><span style="color:green">{{status}}</span></div>
+        </div>
+        <div class="row desc" style="color:black">
+          <div class="col">{{date| date:'medium'}}</div>
+        </div>
+        <div class="row desc">
+          <div class="col">{{address}}</div>
+        </div>
+        <div class="row desc">
+          <div class="col">Facility - {{worklocation}}</div>
+        </div>
+      </div>
+
+
+      <div class="item item-divider" style="padding:0px !important;background-color:#ffffff">
+        <div class="row">
+
+          <div class="col button button-icon ion-checkmark buttoncolor" style="margin-right:5px;color:#ffffff !important;" ng-click='Resolve()'>
+            <span style="color:#ffffff">&nbsp;<b>Resolved</b></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="card" ng-show="comment1.length>0">
+      <div class="item item-divider" style="background-color:#232527;">
+        <h2 class="padding fontLarge col-90" style="color:#ffffff;"><b>Comments</b></h2>
+      </div>
+
+      <div class="item item-text-wrap" ng-repeat="comnt in comment1">
+        <div class="item item-thumbnail-left item-text-wrap item-avatar">
+          <img ng-src="{{comnt.pic}}">
+          <h4 class=""><span class="miracleBlack">{{ comnt.comment }}</span></h4>
+          <h2 class="miracleBlue ">
+              <span class="">{{comnt.id}}</span></h2>
+          <h4><span class="miracleBlack" >{{comnt.date| date:'mediumDate'}}</span></h4>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="padding">
+      <div id="Comment" class="row" style="border: 1px solid rgba(0, 0, 0, 0.3)">
+        <textarea ng-model="name.txtcomment" placeholder="Add your commenet here" class="col-90 textareaComment"></textarea>
+        <button class="col-10 button button-icon icon ion-android-send footer-btn" ng-disabled="inactive" ng-click="sendMessage(name)">
+      </div>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class=" bgmiracleBlue" align-title="center">
+
+    <h1 class="title footitle">© Miracle Software Systems, Inc. </h1>
+
+  </ion-footer-bar>
+</ion-view>

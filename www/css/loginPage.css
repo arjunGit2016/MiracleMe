@@ -1,0 +1,18 @@
+.home-background {
+background: url("../img/Mobile2.png") no-repeat  center fixed;
+  background-size: cover;
+}
+.log{
+border-radius: 10px;
+}
+
+
+
+
+.red {
+  border: solid 1px red;
+}
+
+.white {
+ border: solid 1px white;
+}

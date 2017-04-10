@@ -1,0 +1,44 @@
+
+<ion-view view-title=" App Feedback">
+
+  <ion-content class="has-header has-footer">
+
+    <div class="padding">
+
+      <ul class="list">
+
+        <li class="item item-text-wrap iconColor"  style="text-align: justify;">
+
+          <span> Our developers are working everyday to make sure that the Miracle Me experience is improving.
+
+            If you would like to give us some feedback and help improve the app we would love that.</span>
+
+        </li>
+
+      </ul>
+
+
+
+      <div id="Comment" style="border: 1px solid rgba(0, 0, 0, 0.3)">
+              <textarea rows="4" ng-model="feedback.appFeedback" placeholder="Add your feedback here" class="textareaComment"></textarea>
+            </div>
+
+         <center>
+
+           <button class="button button-block button-calm buttoncolor" style="border-radius: 10px;height: 50px !important;" ng-click="sendFeedBack(name)">
+        <b>Submit Feedback</b>
+               </button>
+
+         </center>
+
+
+
+  </div>
+
+  </ion-content>
+
+  <div class="bar bar-footer  postButton">
+    <div class="title" style="color:white;">© Miracle Software Systems, Inc.</div>
+  </div>
+
+</ion-view>

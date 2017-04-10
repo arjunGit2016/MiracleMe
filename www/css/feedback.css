@@ -1,0 +1,11 @@
+.iconcolor{
+  color:#2368a0 !important;
+}
+
+.textareaComment{
+  width: 100%;
+  padding: 3px;
+  resize: none;
+  font-size: 1.2em;
+  margin-top: 10px;
+}

@@ -1,0 +1,45 @@
+<ion-view view-title="Sent Notifications">
+
+<!-- <ion-nav-bar class="bar-calm bar bar-header bgmiracleBlue" >
+
+  <ion-nav-buttons side="left">
+      <button class="button-clear" ng-click="goBack()">
+        <i class="icon ion-android-arrow-back"></i>
+      </button>
+  </ion-nav-buttons>
+
+
+  </ion-nav-bar> -->
+<ion-content class="has-header has-footer">
+
+
+  <div class="item item-avatar item-icon-right" ng-repeat="notificationSent in sentNotificationData | toArray | orderBy : '-showNotification'" ng-click="sentNotificationDetails({{notificationSent}})">
+        <img ng-src="{{notificationSent.senderImage}}">
+
+        <h2 class="miracleBlue">
+          <span class=""></span></h2>
+        <h3><span class="" style="color:#00aae7;font-size:1em;">{{notificationSent.title}}</span></h3>
+        <h4><span class="">{{notificationSent.sendTo}}</span></h4>
+        <h4><span class="">{{notificationSent.createdDate |  date:'medium'}}</span></h4>
+
+
+      <i class="icon ion-chevron-right right" style="font-size:15px;"></i>
+      </div>
+
+</ion-content>
+<div ng-show="showCreatePush" class="tabs-icon-top tabs-striped tabs-background-calm tabs-color-light postButton">
+  <div class="tabs">
+    <a class="tab-item " href="#/menu/EmployeeNewsFeed">
+<h4 style="color:white;">Recieved</h4>
+        </a>
+        <a class="tab-item active" href="#/menu/sentNotifications">
+          <h4 style="color:white;">Sent</h4>
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+</ion-view>
